@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(3, 0, 19);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+h1,h2 {
+    font-family: "Jersey 10", sans-serif;
+    text-align: center;
+    margin: 20px;
+    font-size: 3rem;
+}
+
+.jogo {
+    margin: auto;
+    width: 600px;       
+    border: 5px solid rgb(15, 15, 15);
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+img {
+    width: 80px;
+    margin-left: 15%;
+}
+
+.usuario img:hover {
+    cursor: pointer;
+    background-color: rgb(230, 196, 85);
+}
+
+.adversario {
+    height: 250px;
+}
+
+.adversario img {
+    display: none;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  40% { transform: translateX(5px); }
+  60% { transform: translateX(-5px); }
+  80% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+#shake {
+    margin-left: 45%;
+    display: block;
+    animation: shake 1s infinite;
+}
+
+#imagem {
+    display: block;
+    margin-left: 45%;
+}
+
+.placar {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#vitorias {
+    color: rgb(43, 231, 43);
+    margin-right: 90px;
+}
+
+#derrotas {
+    color: rgb(255, 35, 35);
+}
+
+#resultado {
+    visibility: hidden;
+    text-align: center;
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: rgb(226, 226, 67);
+}
+
+#zerar {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 40%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(51, 50, 50);
+    color: rgb(77, 233, 233);
+}
+
+#zerar:hover {
+    cursor: pointer;
+}

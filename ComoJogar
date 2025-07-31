@@ -1,0 +1,11 @@
+Pedra > Tesoura e < Papel
+Tesoura > Papel e < Pedra
+Papel > Pedra e < Tesoura
+
+Fazer um programa que vai pedir para o usúario escolher o que ele vai jogar Entre esses 3
+e fazer que o algoritmo escolha de forma aleatório o que o adversário irá jogar
+
+CASO GANHE: Somara um ponto em vitórias
+CASO PERCA: Somara um ponto em derrotas
+CASO EMPATE: Jogam novamente até alguem pontuar
+

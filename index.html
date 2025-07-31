@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra, Papel e Tesoura</title>
+    <link rel="shortcut icon" href="img/icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="jogo">
+        <h1>PEDRA, PAPEL OU TESOURA</h1>
+        <div class="usuario">
+
+            <H2>ESCOLHA O QUE IRÁ JOGAR:</H2>
+
+            <img src="img/papel.png" alt="Papel" id="papel">
+            <img src="img/pedra.png" alt="Pedra" id="pedra">
+            <img src="img/tesoura.png" alt="Tesoura" id="tesoura">
+        </div>
+
+        <div class="adversario">
+            <h2>ADVERSÁRIO: </h2>
+            <img src="img/pedra.png" id="shake">
+            <p id="resultado"></p>
+        </div>
+
+        <div class="placar">
+            <p id="vitorias">Vitórias: <span id="vit"></span></p>
+            <p id="derrotas">Derrotas: <span id="derr"></span></p>
+        </div>
+
+        <button id="zerar">ZERAR PLACAR</button>
+    </div>
+</body>
+
+</html>
