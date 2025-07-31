@@ -15,14 +15,17 @@ body {
 h1,h2 {
     font-family: "Jersey 10", sans-serif;
     text-align: center;
-    margin: 20px;
+    margin: 18px;
     font-size: 3rem;
+    text-shadow: 5px 5px 15px rgb(129, 107, 6);
+    letter-spacing: 3px;
 }
 
 .jogo {
     margin: auto;
     width: 600px;       
     border: 5px solid rgb(15, 15, 15);
+    box-shadow: 0px 0px 15px rgb(63, 63, 63);
     border-radius: 10px;
 }
 
@@ -111,4 +114,68 @@ img {
 
 #zerar:hover {
     cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .jogo {
+        width: 90%;
+    }
+
+    h1, h2 {
+        font-size: 2rem;
+    }
+
+    img {
+        width: 60px;
+    }
+
+    #shake, #imagem {
+        margin-left: 40%;
+    }
+
+    .placar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #vitorias, #derrotas {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    img {
+        width: 50px;
+    }
+
+    #shake, #imagem {
+        margin-left: 35%;
+    }
+}
+
+@media (max-width: 333px) {
+    h1, h2 {
+        font-size: 1.2rem;
+    }
+
+    img {
+        width: 40px;
+    }
+
+    #shake, #imagem {
+        margin-left: 45%;
+    }
+
+    /* Alterar o placar */
+
+    #zerar {
+        margin-left: 30%;
+        font-size: 0.8rem;
+    }
 }
