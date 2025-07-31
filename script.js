@@ -1,3 +1,8 @@
+// script.js
+// Pedra, Papel ou Tesoura
+// Variaveis do jogo
+let jogo = document.querySelector(".jogo")
+
 // variaveis do usuario
 let papel = document.querySelector("#papel")
 let pedra = document.querySelector("#pedra")
@@ -7,7 +12,6 @@ let resultado = document.getElementById("resultado")
 // variaveis do adversario
 let adversario = document.querySelector(".adversario")
 let shake = document.getElementById("shake")
-
 
 // Armazenar valores ao atualizar
 let vitorias = parseInt(localStorage.getItem("vitorias")) || 0
@@ -42,20 +46,21 @@ papel.addEventListener("click", () => {
     if (numero === 1) { //Papel
         imagem.src = "img/papel.png"
         resultado.textContent = "EMPATOU!"
-
+        jogo.style.boxShadow = "0px 0px 15px rgba(221, 187, 33, 1)"
     } else if (numero === 2) { //Pedra
         imagem.src = "img/pedra.png"
         vitorias+=1
         vitoria.textContent = vitorias
         localStorage.setItem("vitorias", vitorias);
         resultado.textContent = "GANHOU!"
-
+        jogo.style.boxShadow = "0px 0px 15px rgba(33, 221, 33, 1)"
     } else {
         imagem.src = "img/tesoura.png"
         derrotas+=1
         derrota.textContent = derrotas
         localStorage.setItem("derrotas", derrotas);
         resultado.textContent = "PERDEU!"
+        jogo.style.boxShadow = "0px 0px 15px rgba(221, 33, 33, 1)"
     }
 
     resultado.style.visibility = "visible"
@@ -87,15 +92,18 @@ pedra.addEventListener("click", () => {
         derrota.textContent = derrotas
         localStorage.setItem("derrotas", derrotas);
         resultado.textContent = "PERDEU!"
+        jogo.style.boxShadow = "0px 0px 15px rgba(221, 33, 33, 1)"
     } else if (numero === 2) { //Pedra
         imagem.src = "img/pedra.png"
         resultado.textContent = "EMPATOU!"
+        jogo.style.boxShadow = "0px 0px 15px rgba(221, 187, 33, 1)"
     } else {
         imagem.src = "img/tesoura.png"
         vitorias+=1
         vitoria.textContent = vitorias
         localStorage.setItem("vitorias", vitorias);
         resultado.textContent = "GANHOU!"
+        jogo.style.boxShadow = "0px 0px 15px rgba(33, 221, 33, 1)"
     }
 
     resultado.style.visibility = "visible"
@@ -127,15 +135,18 @@ tesoura.addEventListener("click", () => {
         vitoria.textContent = vitorias
         localStorage.setItem("vitorias", vitorias);
         resultado.textContent = "GANHOU!"
+        jogo.style.boxShadow = "0px 0px 15px rgba(33, 221, 33, 1)"
     } else if (numero === 2) { //Pedra
         imagem.src = "img/pedra.png"
         derrotas+=1
         derrota.textContent = derrotas
         localStorage.setItem("derrotas", derrotas);
         resultado.textContent = "PERDEU!"
+        jogo.style.boxShadow = "0px 0px 15px rgba(221, 33, 33, 1)"
     } else {
         imagem.src = "img/tesoura.png"
         resultado.textContent = "EMPATE!"
+        jogo.style.boxShadow = "0px 0px 15px rgba(221, 187, 33, 1)"
     }
 
     resultado.style.visibility = "visible"
@@ -151,4 +162,15 @@ zerar.addEventListener("click", () => {
     
     vitoria.textContent = 0
     derrota.textContent = 0
+
+    resultado.textContent = "Placar zerado!"
+    resultado.style.visibility = "visible"
+
+    shake.style.display = "block"
+    let imgAnterior = document.getElementById("imagem")
+    if(imgAnterior) {
+        imgAnterior.remove()
+    }
+
+    jogo.style.boxShadow = "rgb(63, 63, 63) 0px 0px 15px"
 })
