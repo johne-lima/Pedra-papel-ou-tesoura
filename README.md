@@ -3,7 +3,7 @@
 Projeto interativo do clássico jogo **Pedra, Papel ou Tesoura**, desenvolvido com **HTML, CSS e JavaScript**, com foco em prática de DOM, lógica, localStorage e responsividade.
 
 🔗 Acesse o jogo online:  
-👉 [jogue aqui no GitHub Pages](https://seu-usuario.github.io/pedra-papel-tesoura)
+👉 [jogue aqui no GitHub Pages](https://johne-lima.github.io/pedra-papel-tesoura)
 
 ![preview](img/logo-jogo.png) <!-- substitua com o nome correto da imagem -->
 
